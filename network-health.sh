@@ -17,19 +17,17 @@ echo ""
 
 
 echo ""
-echo "..."
-echo ""
 echo "================"
 echo "Network information"
-echo "                        "
+echo "============"
 echo "ip Address: $(ip route | grep default | awk '{print $9}')"
 echo "network interface : $(ip route |grep default | awk '{print $5}')"
 echo "Default Gateway :$(ip route | grep default | awk '{print $3}')"
 echo ""
-echo "..."
-echo "============"
+echo ""
+echo "==========================="
 echo "internet connectivity check"
-echo "==========="
+echo "================="
 
 if  curl -I https://google.com >/dev/null 2>&1 
 then
@@ -41,9 +39,9 @@ echo "internet status : $Internet_status"
 echo ""
 
 echo ""
-echo "=================================="
+echo "======"
 echo "DNS Check"
-echo "=================================="
+echo "=========="
 
 if  nslookup google.com >/dev/null 2>&1 
 then
@@ -55,20 +53,20 @@ echo "DNS_status : $DNS_status"
 echo ""
 echo ""
 
-echo "=================================="
+echo "==========="
 echo "Open Ports"
-echo "=================================="
+echo "================"
 echo "$(ss -tuln | grep LISTEN)"
 echo ""
 
-echo "=================================="
+echo "==============================="
 echo "Critical Services Check"
-echo "=================================="
+echo "==========================="
 echo "sshd servese : $(systemctl is-active sshd)"
 echo "firewalled servese : $(systemctl is-active firewalld)"
 
 echo ""
-echo "=============="
+echo "====================="
 echo "Firewall information"
 echo "=============="
 echo "Active zone:"
@@ -84,22 +82,22 @@ echo "$Open_ports"
 echo ""
 
 echo ""
-echo "=================================="
+echo "==================="
 echo "Disk Health"
-echo "=================================="
+echo "============="
 df -h /
 
 echo ""
-echo "=================================="
+echo "==========="
 echo "Memory Health"
-echo "=================================="
+echo "==================="
 free -h
 
 
 echo ""
-echo "=================================="
+echo "============================"
 echo "NETWORK HEALTH SUMMARY"
-echo "=================================="
+echo "======================"
 
 
 echo "internet status : $Internet_status"
