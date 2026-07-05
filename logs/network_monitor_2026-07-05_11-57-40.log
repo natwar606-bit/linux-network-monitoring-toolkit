@@ -1,0 +1,7 @@
+[2026-07-05 11:57:40] Script Started
+[2026-07-05 11:57:41] Internet Status : PASS
+[2026-07-05 11:57:41] DNS Status : PASS
+[2026-07-05 11:57:41] SSHD Service      : active
+[2026-07-05 11:57:41] Firewalld Service : active
+[2026-07-05 11:57:46] Health Score : 100/100
+[2026-07-05 11:57:46] Script Completed
