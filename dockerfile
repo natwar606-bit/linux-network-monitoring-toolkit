@@ -8,11 +8,11 @@ RUN dnf install -y \
     curl \
     bind-utils \
     procps-ng \
+    hostname \
     && dnf clean all
 
-    copy network-health.sh .
-
-    run chmod +x network-health.sh
+    COPY network-health.sh .
+    RUN chmod +x network-health.sh
 
     CMD ["./network-health.sh"]
 
