@@ -9,8 +9,7 @@ REQUIRED_COMMANDS=(
     curl
     nslookup
     ss
-    systemctl
-    firewall-cmd
+    
 )
 
 
